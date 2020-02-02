@@ -14,10 +14,10 @@ var burger = {
         });
     },
     updateOne: function(objColVals, condition, cb) {
-        orm.updateOne("burgers", condition, function(res) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
             cb(res);
         });
     }
 };
-
+// export the database functions for the controller
 module.exports = burger;
